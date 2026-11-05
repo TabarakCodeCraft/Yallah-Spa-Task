@@ -78,20 +78,23 @@ export default function Page() {
     <main>
       <Hero />
 
-      <div className="mx-auto max-w-6xl px-4 pb-16 pt-8">
-        <div className="mx-auto mb-8 max-w-3xl">
+      <div className="mx-auto max-w-6xl px-3 pb-10 pt-5 sm:px-4 sm:pt-8 md:pb-16">
+        <div className="mx-auto mb-5 max-w-3xl sm:mb-8">
           <Stepper step={g.step} />
         </div>
 
         <div className="grid items-start gap-6 lg:grid-cols-[1fr_340px] lg:gap-8">
-          <section ref={cardRef} className="card scroll-mt-24">
-            <div className="flex items-start justify-between gap-4 rounded-t-3xl border-b border-sand/70 bg-cream/60 px-6 py-5 md:px-8 md:py-6">
-              <div className="space-y-1">
-                <h2 className="text-2xl text-ink">{t(titles[g.step][0])}</h2>
-                <p className="text-sm leading-relaxed opacity-70">
+          <section ref={cardRef} className="card scroll-mt-20">
+            <div className="flex items-start justify-between gap-3 rounded-t-3xl border-b border-sand/70 bg-cream/60 px-4 py-4 sm:px-6 md:px-8 md:py-6">
+              <div className="min-w-0 space-y-1">
+                <h2 className="text-xl text-ink md:text-2xl">
+                  {t(titles[g.step][0])}
+                </h2>
+                <p className="text-[13px] leading-relaxed opacity-70 md:text-sm">
                   {t(titles[g.step][1])}
                 </p>
               </div>
+
               <span
                 dir="ltr"
                 className="mt-1 shrink-0 rounded-full bg-white px-3 py-1 text-xs font-medium tabular-nums text-olive ring-1 ring-sand"
