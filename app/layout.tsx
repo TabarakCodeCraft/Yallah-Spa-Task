@@ -23,7 +23,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://yallah-spa-task-by-tabarak.vercel.app/"),
 
   title: "Yallah Spa | يلا سبا",
   description: "Yallah Spa - Your destination for relaxation and beauty.",
