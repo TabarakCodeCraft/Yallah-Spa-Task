@@ -32,6 +32,6 @@ export const items: Item[] = [
 ];
 export const cards: { id: string; name: L; cls: string }[] = [
   { id: "c1", name: { ar: "ذهبي", en: "Gold" }, cls: "from-[#F6EBCB] to-[#E3C98A]" },
-  { id: "c2", name: { ar: "نعناعي", en: "Mint" }, cls: "from-[#E4F1EA] to-[#A9CDBA]" },
+  { id: "c2", name: { ar: "أخضر", en: "Mint" }, cls: "from-[#E4F1EA] to-[#A9CDBA]" },
   { id: "c3", name: { ar: "وردي", en: "Rose" }, cls: "from-[#FBE9EA] to-[#E8B7BF]" },
 ];
