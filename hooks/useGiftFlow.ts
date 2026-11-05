@@ -17,8 +17,14 @@ export function useGiftFlow() {
   const [errors, setErrors] = useState<Errors>({});
   const [done, setDone] = useState(false);
 
-  const list = useMemo(() => items.filter((i) => i.type === type && (i.name + i.desc).includes(query.trim())), [type, query]);
-  const item = items.find((i) => i.id === itemId);
+  const list = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return items.filter((i) => {
+      if (i.type !== type) return false;
+      const text = `${i.name.en} ${i.name.ar} ${i.desc.en} ${i.desc.ar}`.toLowerCase();
+      return text.includes(q);
+    });
+  }, [type, query]); const item = items.find((i) => i.id === itemId);
   const canNext = step === 0 ? !!branch : step === 1 ? !!item : true;
 
   const changeType = (t: GiftType) => { setType(t); setItemId(""); };
