@@ -3,9 +3,25 @@ import type { L } from "./i18n";
 export type GiftType = "session" | "package";
 export interface Item { id: string; type: GiftType; name: L; desc: L; duration: L; price: number; icon: LucideIcon }
 export const branches: { id: string; name: L }[] = [
-  { id: "riyadh", name: { ar: "الرياض - حي الملقا", en: "Riyadh - Al Malqa" } },
-  { id: "jeddah", name: { ar: "جدة - الروشة", en: "Jeddah - Al Rawshah" } },
-  { id: "khobar", name: { ar: "الخبر - الراكة", en: "Khobar - Al Rakah" } },
+  {
+    id: "makkah",
+    name: { ar: "مكة (خدمات منزلية)", en: "Makkah (Home services)" },
+  },
+  {
+    id: "riyadh",
+    name: { ar: "الرياض (خدمات منزلية)", en: "Riyadh (Home services)" },
+  },
+  {
+    id: "jeddah",
+    name: { ar: "جدة (خدمات منزلية)", en: "Jeddah (Home services)" },
+  },
+  {
+    id: "awali",
+    name: {
+      ar: "فرع العوالي (خدمات في المركز)",
+      en: "Al Awali Branch (In-center services)",
+    },
+  },
 ];
 export const items: Item[] = [
   { id: "s1", type: "session", icon: Flower2, price: 350, name: { ar: "مساج استرخاء", en: "Relaxation Massage" }, desc: { ar: "جلسة مساج سويدي بزيوت عطرية", en: "Swedish massage with aromatic oils" }, duration: { ar: "60 دقيقة", en: "60 min" } },
